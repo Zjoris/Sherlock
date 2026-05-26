@@ -12,3 +12,15 @@ Teaching a model to ask meaningful questions. (Inspired by black stories game).
 * Do this until you have a story that falls in the same ``similarity class" as target story.
 * Use number of questions asked as performance metric? Or perhaps any time you get confirming answer to polar question?
 * Repeated interaction between model and environment (asking polar questions and getting yes/no): RL.
+
+
+## RL for questions (abstract/logical)
+
+There is some infinite set of worlds $S$ (each world represents a possible story (which could be charachterized by Prop logic?)), with $S^*\subset S$ as the similarity class of target stories. We sample a finite set from $S$, call it $\^{S}_0$, which is our initial thoughts of what the story could be. ($\^S_0$ can be seen as a similarity class as well). We give a partition of $\^S_0$ which corresponds to a polar questions. Based on yes/no answer we eliminate worlds from $\^S_0$ and may sample new ones from $S$ resulting in $\^S_1$. We keep going until $\^S_n = S^*$. Or something along the lines.
+
+### Performance measures
+
+* Less questions is good? Faster the better?
+* The more specific the better?
+* The more "yes" answers the better?
+* The less worlds that need to be generated/sampled the better?
